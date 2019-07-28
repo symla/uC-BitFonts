@@ -1,0 +1,31 @@
+This document shall cover how to compress a BitFont as a byte stream.
+
+Stream of bits:
+    - stream of config bits:
+        - before each config byte an end bit:
+            - 0 = if a config byte follows
+            - 1 = if no config byte follows
+        - for each config byte a header bit:
+                0 = config byte is zero -> skip, treat next bit like next byte header
+                1 = config byte follows -> read byte
+        - after each config header bit = 1 follows byte as 8 bits
+        - after 32 bytes, stream of characters follows, sorted by char value:
+            - empty bit:
+                0 = not empty
+                1 = empty
+            - preserve bit:
+                0 = char unknown
+                1 = char known but really empty (e.g. space character)
+            - if empty: skip and read next bit as empty bit of next character
+            - if not empty:
+                - offset top:    unary encoding + trailing 0 as end
+                - offset right:  unary encoding + trailing 0 as end
+                - offset bottom: unary encoding + trailing 0 as end
+                - offset left:   unary encoding + trailing 0 as end
+                - bitmap:
+                    - for each pixel (left to right, top to bottom) [char_width * char_height] times:
+                        - 0 bit = pixel is not present / white
+                        - 1 bit = pixel is present / black
+
+    - finish!!! -> no end sequence -> trust in the schema :D
+    - zero bit padding until full bytes reached

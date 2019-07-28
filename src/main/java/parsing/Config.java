@@ -1,5 +1,6 @@
 package parsing;
 
+import java.util.Arrays;
 import java.util.Objects;
 
 
@@ -9,28 +10,46 @@ import java.util.Objects;
 public class Config {
 
     /**
-     * Width of each char.
+     * Index of width byte in config bytes.
      */
-    private final int charWidth;
+    private final static int width_index = 0;
 
     /**
-     * Height of each char.
+     * Index of height byte in config bytes.
      */
-    private final int charHeight;
+    private final static int height_index = 1;
 
-    public Config(int charWidth, int charHeight) {
-        if ( charWidth < 1 ) throw new IllegalArgumentException("Minimum char width is 1, but got "+charWidth+".");
-        if ( charHeight < 5) throw new IllegalArgumentException("Minimum char height is 5, but got "+charHeight+".");
-        this.charWidth = charWidth;
-        this.charHeight = charHeight;
+    /**
+     * Config bytes.
+     */
+    final byte[] configBytes;
+
+    public Config(final byte[] configBytes) {
+        if ( configBytes == null ) throw new NullPointerException("configBytes must not be null.");
+        if ( configBytes.length != 32 )
+            throw new IllegalArgumentException("configBytes length must be 32, but was "+configBytes.length+".");
+
+        this.configBytes = configBytes;
     }
 
     public int getCharWidth() {
-        return charWidth;
+        return Byte.toUnsignedInt(this.configBytes[width_index]);
     }
 
     public int getCharHeight() {
-        return charHeight;
+        return Byte.toUnsignedInt(this.configBytes[height_index]);
+    }
+
+    public static int getWidth_index() {
+        return width_index;
+    }
+
+    public static int getHeight_index() {
+        return height_index;
+    }
+
+    public byte[] getConfigBytes() {
+        return configBytes;
     }
 
     @Override
@@ -38,20 +57,18 @@ public class Config {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Config config = (Config) o;
-        return getCharWidth() == config.getCharWidth() &&
-                getCharHeight() == config.getCharHeight();
+        return Arrays.equals(getConfigBytes(), config.getConfigBytes());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getCharWidth(), getCharHeight());
+        return Arrays.hashCode(getConfigBytes());
     }
 
     @Override
     public String toString() {
         return "Config{" +
-                "charWidth=" + charWidth +
-                ", charHeight=" + charHeight +
+                "configBytes=" + Arrays.toString(configBytes) +
                 '}';
     }
 }

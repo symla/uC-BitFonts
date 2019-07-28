@@ -85,8 +85,9 @@ public class BitFontParser {
         }
 
         /* Parse config */
-        int configWidthHeight[] = parseConfigCharWidths(this.config_IMG);
-        final Config fontConfig = new Config(configWidthHeight[0], configWidthHeight[1]);
+        //int configWidthHeight[] = parseConfigCharWidths(this.config_IMG);
+        final byte configBytes[] = parseConfigBytes(this.config_IMG);
+        final Config fontConfig = new Config(configBytes);
 
         /* Parse characters */
         final Map<Integer, Character> characters = this.parseCharacters(this.main_IMG, this.offset_preserve_IMG, fontConfig);
@@ -116,6 +117,31 @@ public class BitFontParser {
         int height = this.obtainConfigByte(config_IMG, 1);
 
         return new int[]{width, height};
+    }
+
+    /**
+     * Parses all config bytes.
+     * @param config_IMG Config PNG to parse config bytes from.
+     * @return Returns array of config bytes.
+     */
+    private byte[] parseConfigBytes(final BufferedImage config_IMG) {
+        if ( config_IMG == null ) throw new NullPointerException("config_IMG must not be null.");
+
+        if ( config_IMG.getWidth() != config_PNG_width )
+            throw new IllegalArgumentException("Got config PNG with wrong width. Expected width = 16, " +
+                    "but got width = "+config_IMG.getWidth()+".");
+
+        if ( config_IMG.getHeight() != config_PNG_height )
+            throw new IllegalArgumentException("Got config PNG with wrong height. Expected height = 16, " +
+                    "but got height = "+config_PNG_height+".");
+
+        final byte result[] = new byte[32];
+
+        for ( int i = 0; i < result.length; i++ ) {
+            result[i] = (byte) this.obtainConfigByte(config_IMG, i);
+        }
+
+        return result;
     }
 
     /**
