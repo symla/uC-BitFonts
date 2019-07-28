@@ -19,6 +19,8 @@ public class Config {
     private final int charHeight;
 
     public Config(int charWidth, int charHeight) {
+        if ( charWidth < 1 ) throw new IllegalArgumentException("Minimum char width is 1, but got "+charWidth+".");
+        if ( charHeight < 5) throw new IllegalArgumentException("Minimum char height is 5, but got "+charHeight+".");
         this.charWidth = charWidth;
         this.charHeight = charHeight;
     }
