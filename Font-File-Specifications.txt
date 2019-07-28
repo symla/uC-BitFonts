@@ -1,0 +1,44 @@
+Font has to shipped as (multiple) PNG-file(s).
+
+Limitations:
+    - minimum char height: 5 pixels (limited by offset & preserve layer information)
+    - maximum offset amount: equals char width
+
+Naming convention: a-zA-Z0-9_
+
+Main PNG: contains the bitmap
+Offset & Preserve PNG: contains offsets
+Config PNG: settings (width, height, spacing)
+
+
+
+# Main PNG:
+            - file name: Font_Example_123.png
+            - png with 256 tiles, each of same width and height, 16 by 16 tiles
+            - the first character (NULL) is used for unknown chars
+
+# Offset & Preserve PNG:
+            - file name: Font_Example_123_OffsetPreserve.png
+            - same dimensions as main png (to edit the offset png as additional
+              layer in graphics editor). Within a tile the first four rows
+              are used to set the tile-wise offset:
+                1. row: preserve bit: first pixel of the row = black
+                        -> char is empty, do not show unknown char
+                2. row: top -> how many pixels to move to top direction
+                3. row: left -> same with left
+                4. row: bottom -> same with bottom
+                5. row: right -> same with right
+            --> this limits the minimum char height to 4 pixels!
+
+# Config PNG:
+            - file name: Font_Example_123_Config.png
+            - 16x16 pixel image
+                --> 32 bytes for configuration
+                - bytes are read as follows:
+                    - first row, pixels 0-7 = 1. byte
+                    - first row, pixels 8-15 = 2. byte
+                    - second row, pixels 16-23 = 3. byte
+                    - ...
+            - things to configure
+                1. byte: char width in pixels
+                2. byte: char height in pixels
