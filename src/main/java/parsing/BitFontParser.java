@@ -244,7 +244,6 @@ public class BitFontParser {
         boolean main_pixels2D[][] = parsePixels2D(main_IMG, charX, charY, config.getCharWidth(), config.getCharHeight());
 
         boolean offset_preserve_pixelsRow[] = parsePixels(offset_preserve_IMG, charX, charY, config.getCharWidth(), config.getCharHeight());
-        boolean offset_preserve_pixels2D[][] = parsePixels2D(offset_preserve_IMG, charX, charY, config.getCharWidth(), config.getCharHeight());
 
         /* Parse metadata */
         final boolean preserve = offset_preserve_pixelsRow[0];
@@ -257,21 +256,14 @@ public class BitFontParser {
         }
 
         int offsetTop = 0;
-        int offsetRight = 0;
         int offsetBottom = 0;
-        int offsetLeft = 0;
 
         for ( int i = config.getCharWidth()*1; i < config.getCharWidth()*1+config.getCharWidth(); i++ )
             if ( offset_preserve_pixelsRow[i] ) offsetTop++;
 
-        for ( int i = config.getCharWidth()*2; i < config.getCharWidth()*2+config.getCharWidth(); i++ )
-            if ( offset_preserve_pixelsRow[i] ) offsetRight++;
-
-        for ( int i = config.getCharWidth()*3; i < config.getCharWidth()*3+config.getCharWidth(); i++ )
+        for ( int i = config.getCharWidth()*2; i < config.getCharWidth()*3+config.getCharWidth(); i++ )
             if ( offset_preserve_pixelsRow[i] ) offsetBottom++;
 
-        for ( int i = config.getCharWidth()*4; i < config.getCharWidth()*4+config.getCharWidth(); i++ )
-            if ( offset_preserve_pixelsRow[i] ) offsetLeft++;
 
         return new Character(
                 config.getCharWidth(),
@@ -279,9 +271,7 @@ public class BitFontParser {
                 preserve,
                 empty,
                 offsetTop,
-                offsetRight,
                 offsetBottom,
-                offsetLeft,
                 main_pixelsRow,
                 main_pixels2D
         );

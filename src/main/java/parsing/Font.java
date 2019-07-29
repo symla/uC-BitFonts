@@ -1,13 +1,16 @@
 package parsing;
 
+import java.util.Comparator;
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.stream.Collectors;
 
 /**
  * This class is used to store a bitmap font.
  *
- * It contains a config with all font parameters and a map of all characters. A font is meant to be used
- * hold characters for char values ranging from 0 to 255.
+ * It contains a config with all font parameters and a map of all characterMap. A font is meant to be used
+ * hold characterMap for char values ranging from 0 to 255.
  */
 public class Font {
 
@@ -24,12 +27,12 @@ public class Font {
     /**
      * Characters of the font. Char value mapped to character.
      */
-    private final Map<Integer, Character> characters;
+    private final Map<Integer, Character> characterMap;
 
-    public Font(String name, Config config, Map<Integer, Character> characters) {
+    public Font(String name, Config config, Map<Integer, Character> characterMap) {
         this.name = name;
         this.config = config;
-        this.characters = characters;
+        this.characterMap = characterMap;
     }
 
     public String getName() {
@@ -40,8 +43,16 @@ public class Font {
         return config;
     }
 
-    public Map<Integer, Character> getCharacters() {
-        return characters;
+    public Map<Integer, Character> getCharacterMap() {
+        return characterMap;
+    }
+
+    public List<Character> getCharacters() {
+        return this.characterMap.entrySet()
+                .stream()
+                .sorted(Comparator.comparingInt(e -> e.getKey()))
+                .map(e -> e.getValue())
+                .collect(Collectors.toList());
     }
 
     @Override
@@ -51,12 +62,12 @@ public class Font {
         Font font = (Font) o;
         return Objects.equals(getName(), font.getName()) &&
                 Objects.equals(getConfig(), font.getConfig()) &&
-                Objects.equals(getCharacters(), font.getCharacters());
+                Objects.equals(getCharacterMap(), font.getCharacterMap());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getName(), getConfig(), getCharacters());
+        return Objects.hash(getName(), getConfig(), getCharacterMap());
     }
 
     @Override
@@ -64,7 +75,7 @@ public class Font {
         return "Font{" +
                 "name='" + name + '\'' +
                 ", config=" + config +
-                ", characters=" + characters +
+                ", characterMap=" + characterMap +
                 '}';
     }
 }

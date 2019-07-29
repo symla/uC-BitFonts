@@ -31,19 +31,9 @@ public class Character {
     private final int offsetTop;
 
     /**
-     * Amount of pixels to move char to right. If > 0, offsetLeft must be zero.
-     */
-    private final int offsetRight;
-
-    /**
      * Amount of pixels to move char to bottom. If > 0, offsetTop must be zero.
      */
     private final int offsetBottom;
-
-    /**
-     * Amount of pixels to move char to left. If > 0, offsetRight must be zero.
-     */
-    private final int offsetLeft;
 
     /**
      * Array of pixels. Length of array must be {@code charWidth * charHeight} of font config.
@@ -57,15 +47,12 @@ public class Character {
      */
     private final boolean pixels2D[][];
 
-    public Character(final int width, final int height, boolean preserve, boolean empty, int offsetTop, int offsetRight, int offsetBottom, int offsetLeft, boolean[] pixels, boolean[][] pixels2D) {
+    public Character(final int width, final int height, boolean preserve, boolean empty, int offsetTop, int offsetBottom, boolean[] pixels, boolean[][] pixels2D) {
         if ( width < 1 ) throw new IllegalArgumentException("Minimum char width is 1, but got "+width+".");
         if ( height < 5) throw new IllegalArgumentException("Minimum char height is 5, but got "+height+".");
 
         if ( offsetTop != 0 && offsetBottom != 0 ) throw new IllegalArgumentException("OffsetTop was set " +
                 "("+offsetTop+") and offsetBottom ("+offsetBottom+"), but only one can be set.");
-
-        if ( offsetLeft != 0 && offsetRight != 0 ) throw new IllegalArgumentException("OffsetLeft was set " +
-                "("+offsetLeft+") and offsetRight ("+offsetRight+"), but only one can be set.");
 
         if ( pixels == null ) throw new NullPointerException("pixels must not be null.");
         if ( pixels2D == null ) throw new NullPointerException("pixels2D must not be null.");
@@ -78,9 +65,7 @@ public class Character {
         this.preserve = preserve;
         this.empty = empty;
         this.offsetTop = offsetTop;
-        this.offsetRight = offsetRight;
         this.offsetBottom = offsetBottom;
-        this.offsetLeft = offsetLeft;
         this.pixels = pixels;
         this.pixels2D = pixels2D;
     }
@@ -105,16 +90,8 @@ public class Character {
         return offsetTop;
     }
 
-    public int getOffsetRight() {
-        return offsetRight;
-    }
-
     public int getOffsetBottom() {
         return offsetBottom;
-    }
-
-    public int getOffsetLeft() {
-        return offsetLeft;
     }
 
     public boolean[] getPixels() {
@@ -135,16 +112,14 @@ public class Character {
                 isPreserve() == character.isPreserve() &&
                 isEmpty() == character.isEmpty() &&
                 getOffsetTop() == character.getOffsetTop() &&
-                getOffsetRight() == character.getOffsetRight() &&
                 getOffsetBottom() == character.getOffsetBottom() &&
-                getOffsetLeft() == character.getOffsetLeft() &&
                 Arrays.equals(getPixels(), character.getPixels()) &&
                 Arrays.equals(getPixels2D(), character.getPixels2D());
     }
 
     @Override
     public int hashCode() {
-        int result = Objects.hash(getWidth(), getHeight(), isPreserve(), isEmpty(), getOffsetTop(), getOffsetRight(), getOffsetBottom(), getOffsetLeft());
+        int result = Objects.hash(getWidth(), getHeight(), isPreserve(), isEmpty(), getOffsetTop(), getOffsetBottom());
         result = 31 * result + Arrays.hashCode(getPixels());
         result = 31 * result + Arrays.hashCode(getPixels2D());
         return result;
@@ -158,9 +133,7 @@ public class Character {
                 ", preserve=" + preserve +
                 ", empty=" + empty +
                 ", offsetTop=" + offsetTop +
-                ", offsetRight=" + offsetRight +
                 ", offsetBottom=" + offsetBottom +
-                ", offsetLeft=" + offsetLeft +
                 ", pixels=" + Arrays.toString(pixels) +
                 ", pixels2D=" + Arrays.toString(pixels2D) +
                 '}';
