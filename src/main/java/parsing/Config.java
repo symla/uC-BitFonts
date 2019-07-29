@@ -1,7 +1,6 @@
 package parsing;
 
 import java.util.Arrays;
-import java.util.Objects;
 
 
 /**
@@ -26,8 +25,8 @@ public class Config {
 
     public Config(final byte[] configBytes) {
         if ( configBytes == null ) throw new NullPointerException("configBytes must not be null.");
-        if ( configBytes.length != 32 )
-            throw new IllegalArgumentException("configBytes length must be 32, but was "+configBytes.length+".");
+        if ( configBytes.length != 2 )
+            throw new IllegalArgumentException("configBytes length must be 2, but was "+configBytes.length+".");
 
         this.configBytes = configBytes;
     }
@@ -38,14 +37,6 @@ public class Config {
 
     public int getCharHeight() {
         return Byte.toUnsignedInt(this.configBytes[height_index]);
-    }
-
-    public static int getWidth_index() {
-        return width_index;
-    }
-
-    public static int getHeight_index() {
-        return height_index;
     }
 
     public byte[] getConfigBytes() {

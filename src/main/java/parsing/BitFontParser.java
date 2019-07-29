@@ -13,12 +13,12 @@ public class BitFontParser {
     /**
      * Config PNG width to assert.
      */
-    private final static int config_PNG_width = 16;
+    private final static int config_PNG_width = 8;
 
     /**
      * Config PNG height to assert.
      */
-    private final static int config_PNG_height = 16;
+    private final static int config_PNG_height = 2;
 
     /**
      * PNG containing the main tiles (16x16 tiles).
@@ -98,28 +98,6 @@ public class BitFontParser {
     }
 
     /**
-     * Parses width and height from config image.
-     * @param config_IMG Config PNG.
-     * @return Returns int array. First element is width, second height.
-     */
-    private int[] parseConfigCharWidths(final BufferedImage config_IMG) {
-        if ( config_IMG == null ) throw new NullPointerException("config_IMG must not be null.");
-
-        if ( config_IMG.getWidth() != config_PNG_width )
-            throw new IllegalArgumentException("Got config PNG with wrong width. Expected width = 16, " +
-                    "but got width = "+config_IMG.getWidth()+".");
-
-        if ( config_IMG.getHeight() != config_PNG_height )
-            throw new IllegalArgumentException("Got config PNG with wrong height. Expected height = 16, " +
-                    "but got height = "+config_PNG_height+".");
-
-        int width = this.obtainConfigByte(config_IMG, 0);
-        int height = this.obtainConfigByte(config_IMG, 1);
-
-        return new int[]{width, height};
-    }
-
-    /**
      * Parses all config bytes.
      * @param config_IMG Config PNG to parse config bytes from.
      * @return Returns array of config bytes.
@@ -128,14 +106,14 @@ public class BitFontParser {
         if ( config_IMG == null ) throw new NullPointerException("config_IMG must not be null.");
 
         if ( config_IMG.getWidth() != config_PNG_width )
-            throw new IllegalArgumentException("Got config PNG with wrong width. Expected width = 16, " +
+            throw new IllegalArgumentException("Got config PNG with wrong width. Expected width = "+config_PNG_width+", " +
                     "but got width = "+config_IMG.getWidth()+".");
 
         if ( config_IMG.getHeight() != config_PNG_height )
-            throw new IllegalArgumentException("Got config PNG with wrong height. Expected height = 16, " +
-                    "but got height = "+config_PNG_height+".");
+            throw new IllegalArgumentException("Got config PNG with wrong height. Expected height = "+config_PNG_height+", " +
+                    "but got height = "+config_IMG.getHeight()+".");
 
-        final byte result[] = new byte[32];
+        final byte result[] = new byte[2];
 
         for ( int i = 0; i < result.length; i++ ) {
             result[i] = (byte) this.obtainConfigByte(config_IMG, i);
@@ -162,12 +140,12 @@ public class BitFontParser {
                     "but got height = "+config_PNG_height+".");
 
         if ( byteIndex < 0 ) throw new IllegalArgumentException("byteIndex must not be negative, but was "+byteIndex+".");
-        if ( byteIndex > 31 ) throw new IllegalArgumentException("byteIndex must not be larger than 31, but was "+byteIndex+".");
+        if ( byteIndex > 1 ) throw new IllegalArgumentException("byteIndex must not be larger than 31, but was "+byteIndex+".");
 
         int result = 0x00;
 
-        final int y = byteIndex/2;
-        final int startX = (byteIndex * 8) % 16;
+        final int y = byteIndex;
+        final int startX = 0;
         for ( int x = startX; x < startX+8; x++ ) {
             final int rgb = config_IMG.getRGB(x, y);
             boolean pixelSet = (rgb & 0x00FFFFFF) == 0x00000000;
