@@ -33,6 +33,20 @@ public class Main {
         fout.write(fontbytes);
         fout.close();
 
-        System.out.println(EncodingUtils.bytesToHexStrings(fontbytes));
+        final StringBuilder sb = new StringBuilder();
+        sb.append("/* "+bitFontParser.getParsedBitFont().getName()+" Font */\n\n");
+        sb.append("const uint8_t "+bitFontParser.getParsedBitFont().getName()+"["+fontbytes.length+"] = {\n    ");
+        for ( int i = 0; i < fontbytes.length; i++ ) {
+            if ( i > 0 ) sb.append(", ");
+            sb.append("0x");
+            sb.append(String.format("%02x", fontbytes[i]).toUpperCase());
+        }
+        sb.append("\n};\n");
+
+        FileOutputStream foutHeader = new FileOutputStream(bitFontParser.getParsedBitFont().getName()+".h");
+        foutHeader.write(sb.toString().getBytes());
+        foutHeader.close();
+
+
     }
 }
