@@ -157,4 +157,14 @@ public class Character {
 
         return sb.toString();
     }
+
+    public static boolean[][] pixels_in_row_to_2d(final int width, final int height, final boolean pixels_in_row[]) {
+        boolean result[][] = new boolean[width][height];
+
+        for ( int i = 0; i < pixels_in_row.length; i++ ) {
+            result[i % width][i/width] = pixels_in_row[i];
+        }
+
+        return result;
+    }
 }
