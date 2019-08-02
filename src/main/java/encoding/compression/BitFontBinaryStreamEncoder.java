@@ -88,13 +88,10 @@ public class BitFontBinaryStreamEncoder {
         result.add(0);
         result.add(1);
 
-        System.out.println("SKIP: "+skip_amount);
-
         //Add skip amount
         for ( int i = 0; i < 8; i++ ) {
             result.add( (skip_amount & ((int)Math.pow(2, i))) > 0 ? 1 : 0 );
         }
-        System.out.println(result);
 
         return result;
     }

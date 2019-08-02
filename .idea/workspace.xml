@@ -6,11 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="4cb6ff5e-adf7-48ba-8376-5594bb2e11a9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AVR_Font_5_by_7.bfbs" beforeDir="false" afterPath="$PROJECT_DIR$/AVR_Font_5_by_7.bfbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AVR_Font_5_by_7.h" beforeDir="false" afterPath="$PROJECT_DIR$/AVR_Font_5_by_7.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Font-ByteStream-Compression-Specification.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Font-ByteStream-Compression-Specification.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/encoding/compression/BitFontBinaryStreamDecoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/encoding/compression/BitFontBinaryStreamDecoder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/encoding/compression/BitFontBinaryStreamEncoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/encoding/compression/BitFontBinaryStreamEncoder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/encoding/compression/BitFontBinaryStreamDecoder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/encoding/compression/BitFontBinaryStreamDecoder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/encoding/compression/BitFontBinaryStreamEncoder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/encoding/compression/BitFontBinaryStreamEncoder.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -46,13 +47,13 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="17345" />
+          <entry key="java" value="17793" />
           <entry key="xml" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="17345" />
+          <entry key="JAVA" value="17793" />
           <entry key="XML" value="2" />
         </counts>
       </usages-collector>
@@ -69,11 +70,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="448">
-              <caret line="93" selection-start-line="93" selection-end-line="93" />
+            <state relative-caret-position="346">
+              <caret line="70" column="62" selection-start-line="70" selection-start-column="62" selection-end-line="70" selection-end-column="62" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -102,11 +103,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/encoding/compression/BitFontBinaryStreamEncoder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="62" column="12" selection-start-line="62" selection-start-column="12" selection-end-line="62" selection-end-column="12" />
+            <state relative-caret-position="508">
+              <caret line="88" column="22" selection-start-line="88" selection-start-column="22" selection-end-line="88" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -117,8 +118,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/encoding/compression/BitFontBinaryStreamDecoder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="369">
-              <caret line="27" selection-start-line="27" selection-end-line="27" />
+            <state relative-caret-position="-67">
+              <caret line="41" column="35" selection-start-line="41" selection-start-column="35" selection-end-line="41" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -219,9 +220,9 @@
         <option value="$PROJECT_DIR$/src/main/java/parsing/BitFontParser.java" />
         <option value="$PROJECT_DIR$/src/main/java/encoding/EncodingUtils.java" />
         <option value="$PROJECT_DIR$/src/main/java/parsing/Character.java" />
+        <option value="$PROJECT_DIR$/src/main/java/encoding/compression/BitFontBinaryStreamEncoder.java" />
         <option value="$PROJECT_DIR$/src/main/java/encoding/compression/BitFontBinaryStreamDecoder.java" />
         <option value="$PROJECT_DIR$/src/main/java/Main.java" />
-        <option value="$PROJECT_DIR$/src/main/java/encoding/compression/BitFontBinaryStreamEncoder.java" />
       </list>
     </option>
   </component>
@@ -310,7 +311,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1564765041570" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1564766829413" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -359,12 +360,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1564323747281</updated>
-      <workItem from="1564323757727" duration="21870000" />
+      <workItem from="1564323757727" duration="22735000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21870000" />
+    <option name="totallyTimeSpent" value="22735000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="807" extended-state="0" />
@@ -519,26 +520,6 @@
     <entry file="file://$PROJECT_DIR$/AVR_Font_5_by_7.bfbs">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/encoding/compression/BitFontBinaryStreamDecoder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="93" selection-start-line="93" selection-end-line="93" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/AVR_Font_5_by_7.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -548,8 +529,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/encoding/compression/BitFontBinaryStreamEncoder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="62" column="12" selection-start-line="62" selection-start-column="12" selection-end-line="62" selection-end-column="12" />
+        <state relative-caret-position="508">
+          <caret line="88" column="22" selection-start-line="88" selection-start-column="22" selection-end-line="88" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/encoding/compression/BitFontBinaryStreamDecoder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-67">
+          <caret line="41" column="35" selection-start-line="41" selection-start-column="35" selection-end-line="41" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="346">
+          <caret line="70" column="62" selection-start-line="70" selection-start-column="62" selection-end-line="70" selection-end-column="62" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
