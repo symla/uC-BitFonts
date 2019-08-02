@@ -12,6 +12,30 @@ Stream of bits: (final minimized version)
             - preserve bit:
                 0 = char unknown
                 1 = char known but really empty (e.g. space character)
+
+            --> meanings of empty & preserve bit
+
+                ------#----------#-----------------------------------------
+                empty | preserve | meaning
+                ------#----------#-----------------------------------------
+                  0   #     0    # normal character, read pixels (offsets allowed)
+                ------#----------#-----------------------------------------
+                  0   #     1    # nonsene state -> bitless-skipping * (no offsets)
+                ------#----------#-----------------------------------------
+                  1   #     0    # empty -> unknown char (shows 0 char) (no offsets)
+                ------#----------#-----------------------------------------
+                  1   #     1    # empty -> shall be empty (e.g. space) (no offsets)
+                ------#----------#-----------------------------------------
+
+                - * bitless-skipping:
+                    - it does not represent a next char, but initializes a skip pointer
+                    - only chars with empty = 1 & preserve = 0 can be skipped
+                    - after empty & preserve bit follows byte indicating how much
+                      many empty chars are skipped least significant bit first
+                    - the next empty & preserve pair can be processed normally
+                    - alternative to skipping with empty = 1 & preserve = 0
+                    - only useful if if skip is 5
+
             - if empty: skip and read next bit as empty bit of next character
             - if not empty:
                 - offset top:    unary encoding + trailing 0 as end
