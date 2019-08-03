@@ -53,7 +53,7 @@ public class BitFontBinaryStreamEncoder {
             int skip_counter = 0;
             for ( int j = i+1; j < characters.size(); j++ ) {
                 final Character checkCharacter = characters.get(j);
-                if ( checkCharacter.isEmpty() && !character.isPreserve() ) {
+                if ( checkCharacter.isEmpty() && !checkCharacter.isPreserve() ) {
                     skip_counter++;
                 } else {
                     nextNonEmptyCharacterExists = true;
@@ -65,12 +65,11 @@ public class BitFontBinaryStreamEncoder {
                 if ( skip_counter >= 5 ) {
                     //Add skip pointer
                     bits.addAll(createSkipPointer(skip_counter));
-                    i += skip_counter-1;
+                    i += skip_counter;
                 } else {
                     // Skip normally with empty & preserve bits
                 }
             } else {
-                //Indicates skip pointer
                 if ( i < characters.size()-1 ) {
                     bits.addAll(createSkipPointer(255));
                     break;
@@ -87,6 +86,8 @@ public class BitFontBinaryStreamEncoder {
         //Indicates skip pointer
         result.add(0);
         result.add(1);
+
+        //System.out.println("Skip: "+skip_amount);
 
         //Add skip amount
         for ( int i = 0; i < 8; i++ ) {

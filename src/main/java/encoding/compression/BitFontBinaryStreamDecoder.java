@@ -34,7 +34,7 @@ public class BitFontBinaryStreamDecoder {
             final boolean empty = bits.pop() == 1;
             final boolean preserve = bits.pop() == 1;
             final boolean[] pixels = new boolean[width*height];
-
+            System.out.println("Decoding char: "+ i);
             //Skip Pointer
             if ( !empty & preserve ) {
                 int skip_amount = read_next_byte(bits);
@@ -45,7 +45,7 @@ public class BitFontBinaryStreamDecoder {
                     characters.put(i+j, new Character(width, height, false, true, 0, 0, pixels, Character.pixels_in_row_to_2d(width, height, pixels)));
                 }
                 if ( skip_amount == 255 ) break;
-                i += skip_amount-2;
+                i += skip_amount-1;
             } else if ( !empty ) {
                 int offsetTop = 0;
                 int offsetBottom = 0;
