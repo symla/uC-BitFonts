@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4cb6ff5e-adf7-48ba-8376-5594bb2e11a9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestFonts/AVR_Font_5_by_7/AVR_Font_5_by_7.png" beforeDir="false" afterPath="$PROJECT_DIR$/TestFonts/AVR_Font_5_by_7/AVR_Font_5_by_7.png" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -26,7 +27,7 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="bfbs" value="2" />
-          <entry key="h" value="2" />
+          <entry key="h" value="3" />
           <entry key="java" value="10" />
           <entry key="png" value="3" />
           <entry key="xml" value="1" />
@@ -34,7 +35,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="C++" value="2" />
+          <entry key="C++" value="3" />
           <entry key="Image" value="3" />
           <entry key="JAVA" value="10" />
           <entry key="PLAIN_TEXT" value="2" />
@@ -57,7 +58,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="270">
@@ -65,6 +66,15 @@
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Icon_Font_12_by_12.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" lean-forward="true" selection-end-line="10" />
             </state>
           </provider>
         </entry>
@@ -180,17 +190,6 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="parsing" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="uC-BitFonts" type="b2602c69:ProjectViewProjectNode" />
-              <item name="uC-BitFonts" type="462c0819:PsiDirectoryNode" />
-              <item name="TestFonts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="uC-BitFonts" type="b2602c69:ProjectViewProjectNode" />
-              <item name="uC-BitFonts" type="462c0819:PsiDirectoryNode" />
-              <item name="TestFonts" type="462c0819:PsiDirectoryNode" />
-              <item name="AVR_Font_5_by_7" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -201,7 +200,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1564855741426" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1564857661654" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -250,16 +249,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1564323747281</updated>
-      <workItem from="1564323757727" duration="25667000" />
+      <workItem from="1564323757727" duration="25935000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25667000" />
+    <option name="totallyTimeSpent" value="25935000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="807" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Image Layers" />
       <window_info id="Designer" />
@@ -271,11 +269,11 @@
       <window_info anchor="bottom" id="Messages" weight="0.32867134" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" weight="0.32867134" />
+      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.32867134" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32867134" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.41958043" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.41958043" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -453,6 +451,13 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Icon_Font_12_by_12.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" lean-forward="true" selection-end-line="10" />
         </state>
       </provider>
     </entry>
