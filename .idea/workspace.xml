@@ -5,13 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4cb6ff5e-adf7-48ba-8376-5594bb2e11a9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/AVR_Font_5_by_7.bfbs" beforeDir="false" afterPath="$PROJECT_DIR$/AVR_Font_5_by_7.bfbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AVR_Font_5_by_7.h" beforeDir="false" afterPath="$PROJECT_DIR$/AVR_Font_5_by_7.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestFonts/AVR_Font_5_by_7/AVR_Font_5_by_7.png" beforeDir="false" afterPath="$PROJECT_DIR$/TestFonts/AVR_Font_5_by_7/AVR_Font_5_by_7.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestFonts/AVR_Font_5_by_7/AVR_Font_5_by_7_Config.png" beforeDir="false" afterPath="$PROJECT_DIR$/TestFonts/AVR_Font_5_by_7/AVR_Font_5_by_7_Config.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestFonts/AVR_Font_5_by_7/AVR_Font_5_by_7_OffsetPreserve.png" beforeDir="false" afterPath="$PROJECT_DIR$/TestFonts/AVR_Font_5_by_7/AVR_Font_5_by_7_OffsetPreserve.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/encoding/compression/BitFontBinaryStreamDecoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/encoding/compression/BitFontBinaryStreamDecoder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/encoding/compression/BitFontBinaryStreamEncoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/encoding/compression/BitFontBinaryStreamEncoder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -33,7 +27,7 @@
         <counts>
           <entry key="bfbs" value="2" />
           <entry key="h" value="2" />
-          <entry key="java" value="9" />
+          <entry key="java" value="10" />
           <entry key="png" value="3" />
           <entry key="xml" value="1" />
         </counts>
@@ -42,20 +36,20 @@
         <counts>
           <entry key="C++" value="2" />
           <entry key="Image" value="3" />
-          <entry key="JAVA" value="9" />
+          <entry key="JAVA" value="10" />
           <entry key="PLAIN_TEXT" value="2" />
           <entry key="XML" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="17905" />
+          <entry key="java" value="18871" />
           <entry key="xml" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="17905" />
+          <entry key="JAVA" value="18871" />
           <entry key="XML" value="2" />
         </counts>
       </usages-collector>
@@ -63,122 +57,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="55" column="10" selection-start-line="55" selection-start-column="10" selection-end-line="55" selection-end-column="10" />
+            <state relative-caret-position="270">
+              <caret line="63" column="147" selection-start-line="63" selection-start-column="147" selection-end-line="63" selection-end-column="147" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/AVR_Font_5_by_7.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" lean-forward="true" selection-end-line="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TestFonts/AVR_Font_5_by_7/AVR_Font_5_by_7_OffsetPreserve.png">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TestFonts/AVR_Font_5_by_7/AVR_Font_5_by_7_Config.png">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/encoding/EncodingUtils.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="30" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/encoding/compression/BitFontBinaryStreamEncoder.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-150">
-              <caret line="49" column="57" selection-start-line="49" selection-start-column="57" selection-end-line="49" selection-end-column="57" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/encoding/compression/BitFontBinaryStreamDecoder.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="47" column="34" selection-start-line="47" selection-start-column="34" selection-end-line="47" selection-end-column="34" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/parsing/BitFontParser.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="324" selection-start-line="324" selection-end-line="331" selection-end-column="22" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#15559#15560#0" expanded="true" />
-                <element signature="e#15590#15591#0" expanded="true" />
-                <element signature="e#15634#15635#0" expanded="true" />
-                <element signature="e#15676#15677#0" expanded="true" />
-                <element signature="e#15711#15712#0" expanded="true" />
-                <element signature="e#15744#15745#0" expanded="true" />
-                <element signature="e#15786#15787#0" expanded="true" />
-                <element signature="e#15817#15818#0" expanded="true" />
-                <element signature="e#15870#15871#0" expanded="true" />
-                <element signature="e#15912#15913#0" expanded="true" />
-                <element signature="e#15956#15957#0" expanded="true" />
-                <element signature="e#15989#15990#0" expanded="true" />
-                <element signature="e#16027#16028#0" expanded="true" />
-                <element signature="e#16063#16064#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/parsing/Character.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1918">
-              <caret line="163" column="42" selection-start-line="163" selection-start-column="42" selection-end-line="163" selection-end-column="42" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#3035#3036#0" expanded="true" />
-                <element signature="e#3063#3064#0" expanded="true" />
-                <element signature="e#3093#3094#0" expanded="true" />
-                <element signature="e#3122#3123#0" expanded="true" />
-                <element signature="e#1548#1549#0" expanded="true" />
-                <element signature="e#1579#1580#0" expanded="true" />
-                <element signature="e#1611#1612#0" expanded="true" />
-                <element signature="e#1639#1640#0" expanded="true" />
-                <element signature="e#1672#1673#0" expanded="true" />
-                <element signature="e#1704#1705#0" expanded="true" />
-                <element signature="e#1809#1810#0" expanded="true" />
-                <element signature="e#1844#1845#0" expanded="true" />
-                <element signature="e#1947#1948#0" expanded="true" />
-                <element signature="e#1976#1977#0" expanded="true" />
-                <element signature="e#2016#2017#0" expanded="true" />
-                <element signature="e#2047#2048#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -214,9 +99,9 @@
         <option value="$PROJECT_DIR$/src/main/java/parsing/BitFontParser.java" />
         <option value="$PROJECT_DIR$/src/main/java/encoding/EncodingUtils.java" />
         <option value="$PROJECT_DIR$/src/main/java/parsing/Character.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/encoding/compression/BitFontBinaryStreamDecoder.java" />
         <option value="$PROJECT_DIR$/src/main/java/encoding/compression/BitFontBinaryStreamEncoder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Main.java" />
       </list>
     </option>
   </component>
@@ -316,7 +201,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1564770248394" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1564855741426" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -365,12 +250,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1564323747281</updated>
-      <workItem from="1564323757727" duration="24890000" />
+      <workItem from="1564323757727" duration="25667000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24890000" />
+    <option name="totallyTimeSpent" value="25667000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="807" extended-state="0" />
@@ -381,7 +266,7 @@
       <window_info id="UI Designer" />
       <window_info id="Capture Tool" />
       <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49791667" visible="true" weight="0.24964234" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49791667" visible="true" weight="0.24964234" />
       <window_info id="Structure" order="1" sideWeight="0.50208336" side_tool="true" weight="0.24964234" />
       <window_info anchor="bottom" id="Messages" weight="0.32867134" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
@@ -390,7 +275,7 @@
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32867134" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.41958043" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.41958043" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -464,19 +349,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/AVR_Font_5_by_7.bfbs">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="55" column="10" selection-start-line="55" selection-start-column="10" selection-end-line="55" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TestFonts/AVR_Font_5_by_7/AVR_Font_5_by_7_OffsetPreserve.png">
-      <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/TestFonts/AVR_Font_5_by_7/AVR_Font_5_by_7_Config.png">
       <provider selected="true" editor-type-id="images" />
@@ -567,7 +439,20 @@
     <entry file="file://$PROJECT_DIR$/AVR_Font_5_by_7.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
-          <caret line="10" lean-forward="true" selection-end-line="10" />
+          <caret line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestFonts/AVR_Font_5_by_7/AVR_Font_5_by_7_OffsetPreserve.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="63" column="147" selection-start-line="63" selection-start-column="147" selection-end-line="63" selection-end-column="147" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
