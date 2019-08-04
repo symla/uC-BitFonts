@@ -75,6 +75,10 @@ public class Main {
     public static final String offset_preserve_Icon_Font_12_by_12 = "TestFonts/Icon_Font_12_by_12/Icon_Font_12_by_12_OffsetPreserve.png";
     public static final String config_Icon_Font_12_by_12 = "TestFonts/Icon_Font_12_by_12/Icon_Font_12_by_12_Config.png";
 
+    public static final String main_Temp_Font_5_by_13 = "TestFonts/Temp_Font_5_by_13/Temp_Font_5_by_13.png";
+    public static final String offset_preserve_Temp_Font_5_by_13 = "TestFonts/Temp_Font_5_by_13/Temp_Font_5_by_13_OffsetPreserve.png";
+    public static final String config_Temp_Font_5_by_13 = "TestFonts/Temp_Font_5_by_13/Temp_Font_5_by_13_Config.png";
+
     public static void main(String args[]) throws Exception {
         /*
         System.out.println("Got " + args.length + " parameters" + (args.length > 0 ? ":" : "."));
@@ -96,6 +100,14 @@ public class Main {
                         main_Icon_Font_12_by_12,
                         offset_preserve_Icon_Font_12_by_12,
                         config_Icon_Font_12_by_12
+                )
+        );
+
+        encodeFontAsBinaryStream(
+                parseFont(
+                        main_Temp_Font_5_by_13,
+                        offset_preserve_Temp_Font_5_by_13,
+                        config_Temp_Font_5_by_13
                 )
         );
 
